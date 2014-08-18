@@ -1,142 +1,117 @@
 <!doctype html>
 <html>
 <head>
-	<meta charset="utf8">
-	<style>
-	body
-	{
-	    font-family: Verdana, sans-serif;
-	    font-size: 12pt;
-		background: #999;
-	}
-    div.post
+    <meta charset="utf8">
+    <style>
+    body
     {
-        display: inline-block;
-        min-width: 300px;
-        margin: 0px;
+        font-family: Verdana, sans-serif;
+        font-size: 12pt;
+		background: #999;
     }
-	span.titlePSB /* page section bar */
-	{
-        margin-top: -4px;
+    span.titlePSB /* page section bar */
+    {
 		font-size: 12pt;
 		padding-top: 3px;
-	    color: white;
-	    font-weight: bold;
+        color: white;
+        font-weight: bold;
 		padding-left: 5px;
 		vertical-align: middle;
 		display: inline-block;
 		transform: skew(-5deg);
-	}
-    span.timestamp
-    {
-        
     }
 	div.outerPSB
 	{
 		margin-right: 1px;
 		border: 1px solid black;
-		border-bottom: 1px solid white;
 		padding: 1px;
 		background: white;
 		transform: skew(5deg);
-		border-radius: 4px 4px 28px 0px;
+		border-radius: 4px 4px 16px 0px;
 	}
 	div.innerPSB
 	{
-        padding-top: 4px;
-		padding-bottom: 24px;
+		height: 32px;
 		background: #3AF;
 		border-radius: 3px 3px 0px 0px;
 	}
 	div.outerPSC /* page section content */
 	{
 		position: relative;
-		top: -26px;
+		top: -10px;
 		left: 0px;
 		margin-right: 1px;
-		margin-left: 3px;
+		margin-left: 2px;
 		border: 1px solid black;
 		padding: 1px;
 		background: white;
 		transform: skewy(-1deg);
-		border-radius: 50px 0px 4px 4px;
-		border-top-left-radius: 150px 24px;
-        margin-bottom: 0px;
+		border-radius: 5px 0px 4px 4px;
 	}
 	div.innerPSC
 	{
 		background: tan;
 		display: block;
-		padding-bottom: 5px;
+		padding-bottom: 15px;
 		border-radius: 0px 0px 3px 3px;
 	}
 	div.innerPSC p
 	{
-		text-indent: -5pt;
+		text-indent: -10pt;
 		font-size: 11pt;
 		position: relative;
-		left: 20px;
+		left: 30px;
 		margin: 0px;
-		margin-right: 30px;
-		padding-top: 10px;
-        padding-bottom: 5px;
+		margin-right: 80px;
+		padding-top: 15px;
 		transform: skewy(1deg);
 	}
 	div.postuserdata
 	{
-        border-radius: 2px;
-        min-width: 154px;
-		margin-left: 0px;
-		margin-right: -1px;
+		/width: 100%;
 		box-sizing: border-box;
-		border-bottom: 1px solid black;
+		border-left: 1px solid black;
 		border-right: 1px solid black;
-		background-color: transparent;
-		transform: skew(5deg);
-		padding-right: 1px;
-		margin-top: 1px;
+		background-color: #3AF;
+		transform: skew(3.5deg);
 	}
 	div.postuserdata div
 	{
 		background-color: #3AF;
 		display: inline-block;
-		margin-left: 1px;
-		margin-top: -1px;
-		width: 100%;
+		/width: 100%;
 		box-sizing: border-box;
+		border-top: 1px solid #3AF;
+		border-left: 1px solid white;
 		border-bottom: 1px solid white;
-		border-right: 1px solid white;
-		padding: 0px 0px;
+		padding: 0px 2px;
 		padding-bottom: 2px;
+		padding-right: 1px;
 	}
 	div.postuserdata span
 	{
-		transform: skew(-5deg) skewy(0.5deg);
+		transform: skew(-3.5deg);
 	}
 	div.postdata
 	{
-		transform: skewy(0.5deg);
 		position: relative;
-		top: -4px;
+		top: -3px;
 		left: -1px;
-		margin-left: -1px;
 		
+		margin-left: -1px;
+		width: 155px;	
+		z-index: 1;
 		float: left;
 	}
 	div.posticon
 	{
-		margin-top: -1px;
-		z-index: -1;
-		transform: skewy(0.5deg);
-		max-width: 154px;
+		width: 154px;
 		box-sizing: padding-box;
 		border: solid black;
 		background: white;
-		border-width: 0px 1px 1px 1px;
+		border-width: 1px 1px 1px 1px;
 		padding: 2px;
-		padding-top: 3px;
 		padding-bottom: 0px;
-        margin-bottom: 0px;
 	}
 	div.posticon img
 	{
@@ -146,20 +121,19 @@
 		border-left: 2px;
 	}
 	span.postername
-	{	
+	{
 		font-size: 11pt;
 		display: inline-block;
 	}
 	span.tripcode
 	{
-        font-family: Lucida Console, Consolas, Courier, monospace;
 		font-size: 10pt;
 		color: maroon;
 		font-weight: bold;
 		float: right;
-		padding-top: 2pt;
+		padding-top: 1pt;
 	}
-	</style>
+    </style>
 </head>
 <body>
 	<tmpl_var name="postlisting"/>
